@@ -10,6 +10,13 @@
   _gaq.push(['_setSampleRate', '100']);
   _gaq.push(['_setAllowLinker', true]);
   _gaq.push(['_getLinkerUrl', 'http://jobs-zzhang22.dev.icims.com']);
+  
+  _gaq.push(function() {
+  var pageTracker = _gat._getTrackerByName();
+  var iframe = document.getElementById('myiframe');
+  iframe.src = pageTracker._getLinkerUrl('http://jobs-zzhang22.dev.icims.com');
+});
+
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -23,7 +30,7 @@
 
 <p>My first paragraph.</p>
 <a href="http://www.google.com" > Click here </a>
-<iframe width="600" height="600" src="https://jobs-zzhang22.dev.icims.com"></iframe>
+<iframe id="myiframe" width="600" height="600"></iframe>
 
 </body>
 </html>
